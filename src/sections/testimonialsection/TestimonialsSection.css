@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* ─── Testimonials Section ───────────────────────────────── */
+.testimonials-section {
+  width: 100%;
+  background-color: #0cb8a0;
+  padding: 72px 0 64px 0;
+  font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
+}
+
+.testimonials-container {
+  max-width: 1620px;
+  width: 84.375%;
+  margin: 0 auto;
+}
+
+/* ─── Header ─────────────────────────────────────────────── */
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.testimonials-main-heading {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.2px;
+}
+
+/* ─── Carousel Wrap ──────────────────────────────────────── */
+.carousel-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+}
+
+/* ─── Arrows ─────────────────────────────────────────────── */
+.carousel-arrow {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s, border-color 0.2s;
+  padding: 0;
+}
+
+.carousel-arrow:hover {
+  background: rgba(255, 255, 255, 0.28);
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+.carousel-arrow svg {
+  width: 18px;
+  height: 18px;
+}
+
+.carousel-arrow--prev {
+  margin-right: 20px;
+}
+
+.carousel-arrow--next {
+  margin-left: 20px;
+}
+
+/* ─── Slide Container ────────────────────────────────────── */
+.carousel-slide {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  border-radius: 4px;
+  overflow: hidden;
+  min-height: 340px;
+  will-change: opacity, transform;
+  gap:30px;
+}
+
+/* ─── Slide Animations ───────────────────────────────────── */
+@keyframes slideInFromRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInFromLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideOutToLeft {
+  from { opacity: 1; transform: translateX(0); }
+  to   { opacity: 0; transform: translateX(-30px); }
+}
+
+@keyframes slideOutToRight {
+  from { opacity: 1; transform: translateX(0); }
+  to   { opacity: 0; transform: translateX(30px); }
+}
+
+.carousel-slide.slide-enter {
+  animation: slideInFromRight 0.42s ease forwards;
+}
+
+.carousel-slide.slide-exit-left {
+  animation: slideOutToLeft 0.42s ease forwards;
+}
+
+.carousel-slide.slide-exit-right {
+  animation: slideOutToRight 0.42s ease forwards;
+}
+
+/* ─── Slide: Image Column ────────────────────────────────── */
+.carousel-image-col {
+  width: 50%;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-side-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ─── Slide: Content Column ──────────────────────────────── */
+.carousel-content-col {
+  flex: 1;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* ─── Clutch Badge ───────────────────────────────────────── */
+.clutch-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.clutch-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.clutch-label {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+/* ─── Stars ──────────────────────────────────────────────── */
+.stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 18px;
+}
+
+.star {
+  width: 18px;
+  height: 18px;
+}
+
+/* ─── Quote ──────────────────────────────────────────────── */
+.testimonial-quote {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.75;
+  margin: 0 0 24px 0;
+  font-style: italic;
+}
+
+/* ─── Author ─────────────────────────────────────────────── */
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.author-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  flex-shrink: 0;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.author-name {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.stars{
+  max-width: 30px;
+  width: 100%;
+  height: auto;
+}
+
+.author-role {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+/* ─── Dots ───────────────────────────────────────────────── */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 28px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.25s, border-color 0.25s, transform 0.2s;
+}
+
+.carousel-dot.active {
+  background: #ffffff;
+  border-color: #ffffff;
+  transform: scale(1.25);
+}
+
+.carousel-dot:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════════════════ */
+
+/* ── 1200px ──────────────────────────────────────────────── */
+@media (max-width: 1200px) {
+  .testimonials-container {
+    width: 88%;
+  }
+  .carousel-content-col {
+    padding: 32px 32px;
+  }
+  .carousel-image-col {
+    width: 36%;
+  }
+}
+
+/* ── 1024px ──────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .testimonials-section {
+    padding: 56px 0 48px 0;
+  }
+  .testimonials-container {
+    width: 90%;
+  }
+  .testimonials-main-heading {
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+  .testimonials-header {
+    margin-bottom: 36px;
+  }
+  .carousel-image-col {
+    width: 34%;
+  }
+  .carousel-content-col {
+    padding: 28px 28px;
+  }
+  .clutch-label {
+    font-size: 14px;
+  }
+  .testimonial-quote {
+    font-size: 13.5px;
+  }
+  .carousel-arrow--prev {
+    margin-right: 12px;
+  }
+  .carousel-arrow--next {
+    margin-left: 12px;
+  }
+  .carousel-arrow {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+/* ── 768px: stack slide vertically ──────────────────────── */
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 44px 0 40px 0;
+  }
+  .testimonials-container {
+    width: 90%;
+  }
+  .testimonials-main-heading {
+    font-size: 26px;
+  }
+  .testimonials-header {
+    margin-bottom: 28px;
+  }
+
+  /* Stack slide: image on top, content below */
+  .carousel-slide {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .carousel-image-col {
+    width: 100%;
+    height: 220px;
+  }
+
+  .carousel-content-col {
+    padding: 24px 22px;
+  }
+
+  /* Hide arrows on mobile — use dots only */
+  .carousel-arrow {
+    display: none;
+  }
+
+  .testimonial-quote {
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+
+  .author-name {
+    font-size: 15px;
+  }
+
+  .author-role {
+    font-size: 12px;
+  }
+
+  .clutch-label {
+    font-size: 13px;
+  }
+
+  .carousel-dots {
+    margin-top: 20px;
+  }
+}
+
+/* ── 576px ───────────────────────────────────────────────── */
+@media (max-width: 576px) {
+  .testimonials-section {
+    padding: 36px 0 32px 0;
+  }
+  .testimonials-container {
+    width: 92%;
+  }
+  .testimonials-main-heading {
+    font-size: 22px;
+  }
+  .testimonials-header {
+    margin-bottom: 22px;
+  }
+
+  .carousel-image-col {
+    height: 190px;
+  }
+
+  .carousel-content-col {
+    padding: 20px 18px;
+    width: 100%;
+  }
+
+  .clutch-badge {
+    margin-bottom: 10px;
+  }
+
+  .clutch-label {
+    font-size: 12px;
+  }
+
+  .stars {
+    margin-bottom: 12px;
+  }
+
+  .star {
+    width: 16px;
+    height: 16px;
+  }
+
+  .testimonial-quote {
+    font-size: 12.5px;
+    line-height: 1.7;
+    margin-bottom: 14px;
+  }
+
+  .author-avatar {
+    width: 38px;
+    height: 38px;
+  }
+
+  .author-name {
+    font-size: 14px;
+  }
+
+  .author-role {
+    font-size: 11.5px;
+  }
+}
+
+/* ── 375px ───────────────────────────────────────────────── */
+@media (max-width: 375px) {
+  .testimonials-container {
+    width: 94%;
+  }
+  .testimonials-main-heading {
+    font-size: 20px;
+  }
+  .carousel-image-col {
+    height: 165px;
+  }
+  .carousel-content-col {
+    padding: 18px 14px;
+  }
+  .testimonial-quote {
+    font-size: 12px;
+  }
+}
+
+/* ─── Reduced motion support ─────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .carousel-slide.slide-enter,
+  .carousel-slide.slide-exit-left,
+  .carousel-slide.slide-exit-right {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
