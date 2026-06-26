@@ -18,6 +18,14 @@
   align-items: center;
 }
 
+@media(max-width:1700px) and (min-width:1380){
+  .contact-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  width:100% !important;
+}
+}
+
 /* LEFT SIDE */
 
 .contact-left {

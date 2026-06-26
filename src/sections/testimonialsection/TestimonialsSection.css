@@ -15,6 +15,14 @@
   margin: 0 auto;
 }
 
+@media(max-width:1700px) and (min-width:1380){
+  .testimonial-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  width:100% !important;
+}
+}
+
 /* ─── Header ─────────────────────────────────────────────── */
 .testimonials-header {
   text-align: center;

@@ -29,6 +29,15 @@
   align-items: center;
 }
 
+@media(max-width:1700px) and (min-width:1380){
+  .footer-top-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  width:100% !important;
+}
+}
+
+
 .footer-top-container h3 {
   margin: 0;
   font-size: 18px;

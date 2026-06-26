@@ -15,6 +15,14 @@
   text-align: center;
 }
 
+@media(max-width:1700px) and (min-width:1380){
+  .clients-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  width:100% !important;
+}
+}
+
 .clients-heading {
   font-family: 'Open Sans', sans-serif;
   font-size: 36px;

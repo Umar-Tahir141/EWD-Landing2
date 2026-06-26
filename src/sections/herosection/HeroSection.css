@@ -21,6 +21,14 @@
   gap: 0;
 }
 
+@media(max-width:1700px) and (min-width:1380){
+  .nav-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  width:100% !important;
+}
+}
+
 .nav-logo img {
   max-width: 144px;
   width: 100%;
